@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(100deg, rgba(170, 193, 197, 0.519), white, rgba(244, 212, 217, 0.535), white);
+}
+
+h1 {
+    position: relative;
+    margin-top: 60px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+
+.dashboard {
+    position: relative;
+    top: -60px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+.text-content {
+    position: relative;
+    display: block;
+    font-size: 15px;
+    /* max-width: 600px;*/
+    width: 250px;
+    left: -40px;
+    height: auto;
+    padding: 15px 50px 15px 50px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 4px #00000069;
+    transition: transform 1s ease;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.text-content:hover {
+    background: rgba(69, 9, 112, 0.303);
+    color: white;
+    transform: scale(1.05);
+    animation: float 4s  infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+.notification {
+    position: relative;
+    margin-top: 20px;
+    left: 190px;
+    height: 300px;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.notification:hover{
+    transform: scale(1.05);
+}
+
+.numbers {
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 100%;
+    display: inline-block;
+    float: left;
+}
+
+.notification .text-content{
+    padding:0 20px;
+}
+
+.numbers li {
+    list-style: none;
+    height: 85px;
+    position: relative;
+    bottom: 50px;
+}
+
+.numbers span {
+    font-family: 'Inter' sans-serif;
+    font-weight: 600;
+    position: absolute;
+    bottom: 65px;
+    right: 90px;
+}
+
+.bars {
+    position: relative;
+    right: 90px;
+    top: -60px;
+    color: indigo;
+    font-size: 14px;
+    font-weight: 600;
+    background: #96959546 ;
+    margin: 10px;
+    padding: 0;
+    display: inline-block;
+    width: 500px;
+    height: 358px;
+    box-shadow: 0 0 10px rgb(213, 231, 232), 0 0 5px rgb(244, 221, 225);
+    border-radius: 15px;
+}
+
+.bars li {
+    display: table-cell;
+    width: 200px;
+    height: 300px;
+    position: relative;
+}
+
+.bars span {
+    width: 100%;
+    position: absolute;
+    bottom: -80px;
+    text-align: center;
+}
+
+.bars .bar {
+    display: block;
+    background: whitesmoke;
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: -55px;
+    box-shadow: 0 0 10px rgb(213, 231, 232), 0 0 5px rgba(221, 128, 144, 0.387);
+    transition: 0.5s ease;
+    transition-property: background, box-shadow;
+}
+
+.bars .bar:hover {
+    background: rgb(186, 157, 225);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.bars .bar::before {
+    color: #fff;
+    content: attr(data-percentage) '%';
+    position: relative;
+    bottom: 20px;
+}
+
+.dashboard2 {
+    position: relative;
+    left: 20px;
+    top: -200px;
+    width: 650px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+#myChart {
+    position: relative;
+    width: 600px;
+    height: auto;
+    top: -6px;
+    margin-left: 150px;
+    border: none;
+    box-shadow: 0 0 15px #00000069;
+    background: linear-gradient(135deg, aliceblue, whitesmoke);
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+#myChart:hover {
+    transform: scale(1.05);
+}
+
+.messages {
+    display: none;
+}
+
+.text{
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+    display: block;
+    font-size: 15px;
+    /* max-width: 600px;*/
+    width: 300px;
+    left: 800px;
+    height: auto;
+    top: -650px;
+    padding: 20px 60px 20px 60px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 4px #00000069;
+    transition: transform 0.4s ease;
+}
+
+.text:hover {
+    background-color: #5453534c;
+    animation: float1 2.5s infinite;
+}
+
+@keyframes float1 {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#myChart, .text {
+    padding: 10px 25px;
+}
+
+.dashboard3 {
+    position: relative;
+    left: 385px;
+    margin-top: -400px;
+    display: block;
+    width: 600px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px 20px 15px 20px;
+    height: auto;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    box-shadow: 0 0 15px #49494959;
+}
+
+.entreprises {
+    position: relative;
+    width: 300px;
+    height: auto;
+    margin-left: 150px;
+}
+
+.dashboard4{
+    position: relative;
+    top: 70px;
+    left: 385px;
+    display: block;
+    width: 600px;
+    height: auto;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #7c7b7b7b;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 20px 20px 15px 20px;
+}
+
+.personnes {
+    position: relative;
+    width: 300px;
+    height: auto;
+    margin-left: 150px;
+}

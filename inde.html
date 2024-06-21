@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>DASHBOARD STATIC VIEWS</h1>
+    <div class="dashboard">
+        <div class="text-content">
+            <h2>Static dashboard for the notification unread</h2>
+            <p>Since your last login, we have recorded all important new notifications for you. This includes updates such as comments, mentions, and replies to your posts. You can see the total number of unread notifications to ensure you don’t miss any essential information.</p>
+        </div>
+        <div class="notification">
+            <ul class="numbers">
+                <li><span>20</span></li>
+                <li><span>15</span></li>
+                <li><span>10</span></li>
+                <li><span>5</span></li>
+                <li><span>0</span></li>
+            </ul>
+            <ul class="bars">
+                <li><div class="bar" data-percentage="70"></div><span>1semaine</span></li>
+                <li><div class="bar" data-percentage="30"></div><span>2semaines</span></li>
+                <li><div class="bar" data-percentage="60"></div><span>3semaines</span></li>
+                <li><div class="bar" data-percentage="20"></div><span>4semaines</span></li>
+                <li><div class="bar" data-percentage="80"></div><span>1mois</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dashboard2">
+        <div class="messages">
+            <ul class="nbr">
+                <li><span>2</span></li>
+                <li><span>5</span></li>
+                <li><span>10</span></li>
+                <li><span>30</span></li>
+                <li><span>40</span></li>
+            </ul>
+            <ul class="lines">
+                <li><div class="line" percentage="70"></div><span>1jour</span></li>
+                <li><div class="line" percentage="30"></div><span>2jours</span></li>
+                <li><div class="line" percentage="60"></div><span>3jours</span></li>
+                <li><div class="line" percentage="20"></div><span>1semaine</span></li>
+                <li><div class="line" percentage="80"></div><span>1mois</span></li>
+            </ul>
+        </div>
+        <canvas id="myChart" width="400" height="300"></canvas>
+    </div>
+    <div class="text">
+        <h2>Static dashboard for the messages unread</h2>
+        <p>Private messages exchanged with other users are a crucial part of your experience on our platform. We count all the new messages that you haven’t read yet. This statistic helps you stay up-to-date with your personal and professional communications.</p>
+    </div>
+    <div class="dashboard3">
+        <h2>Your Companies in each neighborhood</h2>
+        <p>We track the companies you follow on our platform. You can check the total number of companies you are following to see the extent of your interests and professional engagements. This statistic helps you stay connected with the fields and companies that matter most to you.</p>
+        <div class="entreprises">
+            <canvas id="doughnut" width="300" height="300"></canvas>
+        </div>
+    </div>
+    <div class="dashboard4">
+        <h2>People Interested in the Same Companies</h2>
+        <p>This metric shows you how many other users are interested in the same companies as you. It’s a great way to discover people with shared interests and identify networking opportunities with like-minded professionals.</p>
+        <div class="personnes">
+            <canvas id="linechart" width="400" height="300"></canvas>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            $('.bars li .bar').each(function(key, bar){
+                var percentage = $(this).data('percentage')
+                $(this).animate({
+                    'height': percentage + '%'
+                },1000)
+            })
+        })
+
+        $(document).ready(function() {
+            const ctx = document.getElementById('doughnut').getContext('2d');
+            const doughnut = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['AMBANIDIA', 'AMBATOROKA','ANALAKELY', 'MANDROSEZA'],
+                    datasets: [{
+                        label: 'Nombre d\'entreprises',
+                        data: [12, 19, 3, 5],
+                        backgroundColor: [
+                            'rgba(0, 0, 128, 0.8)', 
+                            'rgba(75, 0, 130, 0.8)', 
+                            'rgba(148, 0, 211, 0.8)', 
+                            'rgba(199, 21, 133, 0.8)', 
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'NUMBER OF SOCITIES'
+                        }
+                    }
+                }
+            });
+        });
+        $(document).ready(function() {
+            const ctx = document.getElementById('linechart').getContext('2d');
+            const linechart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['INSI', 'ILO', 'OCEANTRADE', 'ACCES BANQUE'],
+                    datasets: [{
+                        label: 'My fourth dataset',
+                        data: [65, 50, 70, 35],
+                        fill: true,
+                        borderColor: 'rgb(75, 192, 192)',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'NUMBER OF SOCITIES'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="index.js"></script>
+    <script src="chart.js"></script>
+</body>
+</html>
