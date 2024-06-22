@@ -9,65 +9,164 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>DASHBOARD STATIC VIEWS</h1>
-    <div class="dashboard">
-        <div class="text-content">
-            <h2>Static dashboard for the notification unread</h2>
-            <p>Since your last login, we have recorded all important new notifications for you. This includes updates such as comments, mentions, and replies to your posts. You can see the total number of unread notifications to ensure you don’t miss any essential information.</p>
-        </div>
-        <div class="notification">
-            <ul class="numbers">
-                <li><span>20</span></li>
-                <li><span>15</span></li>
-                <li><span>10</span></li>
-                <li><span>5</span></li>
-                <li><span>0</span></li>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">Unknown</a>
+            </div>
+            <ul class="links">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Explorer</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Messages</a></li>
             </ul>
-            <ul class="bars">
-                <li><div class="bar" data-percentage="70"></div><span>1semaine</span></li>
-                <li><div class="bar" data-percentage="30"></div><span>2semaines</span></li>
-                <li><div class="bar" data-percentage="60"></div><span>3semaines</span></li>
-                <li><div class="bar" data-percentage="20"></div><span>4semaines</span></li>
-                <li><div class="bar" data-percentage="80"></div><span>1mois</span></li>
-            </ul>
+            <a href="https://dominant-egret-86.accounts.dev/sign-in" class="action-btn">Explorer</a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-    </div>
-    <div class="dashboard2">
-        <div class="messages">
-            <ul class="nbr">
-                <li><span>2</span></li>
-                <li><span>5</span></li>
-                <li><span>10</span></li>
-                <li><span>30</span></li>
-                <li><span>40</span></li>
-            </ul>
-            <ul class="lines">
-                <li><div class="line" percentage="70"></div><span>1jour</span></li>
-                <li><div class="line" percentage="30"></div><span>2jours</span></li>
-                <li><div class="line" percentage="60"></div><span>3jours</span></li>
-                <li><div class="line" percentage="20"></div><span>1semaine</span></li>
-                <li><div class="line" percentage="80"></div><span>1mois</span></li>
-            </ul>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
         </div>
-        <canvas id="myChart" width="400" height="300"></canvas>
-    </div>
-    <div class="text">
-        <h2>Static dashboard for the messages unread</h2>
-        <p>Private messages exchanged with other users are a crucial part of your experience on our platform. We count all the new messages that you haven’t read yet. This statistic helps you stay up-to-date with your personal and professional communications.</p>
-    </div>
-    <div class="dashboard3">
-        <h2>Your Companies in each neighborhood</h2>
-        <p>We track the companies you follow on our platform. You can check the total number of companies you are following to see the extent of your interests and professional engagements. This statistic helps you stay connected with the fields and companies that matter most to you.</p>
-        <div class="entreprises">
-            <canvas id="doughnut" width="300" height="300"></canvas>
+        <div class="dropdown">
+            <li><a href="#" class="navLink">Accueil</a></li>
+            <li><a href="#" class="navLink">Explorer</a></li>
+            <li><a href="#" class="navLink">Services</a></li>
+            <li><a href="#" class="navLink">Messages</a></li>
+            <li><a href="https://dominant-egret-86.accounts.dev/sign-in" class="action-btn navLink">Explorer</a></li>
         </div>
+    </header>
+
+    <div class="entete">
+        <h1>DASHBOARD STATIC VIEWS</h1>
     </div>
-    <div class="dashboard4">
-        <h2>People Interested in the Same Companies</h2>
-        <p>This metric shows you how many other users are interested in the same companies as you. It’s a great way to discover people with shared interests and identify networking opportunities with like-minded professionals.</p>
-        <div class="personnes">
-            <canvas id="linechart" width="400" height="300"></canvas>
+
+    <div class="container">
+
+        <div class="partie1">
+
+            <section>
+                <div class="text-content">
+                    <h2>Static dashboard for the notification unread</h2>
+                    <p>Since your last login, we have recorded all important new notifications for you. This includes updates such as comments, mentions, and replies to your posts. You can see the total number of unread notifications to ensure you don’t miss any essential information.</p>
+                </div>
+            </section>
+    
+            <section>
+                <div class="notification">
+
+                    <img src="images/big_artfichier_752417_4292056_201411191149178.jpg" alt="statistic image">
+        
+                </div>
+            </section>
+    
         </div>
+    
+        <div class="partie2">
+
+            <div class="messages">
+    
+                <ul class="nbr">
+                    <li><span>2</span></li>
+                    <li><span>5</span></li>
+                    <li><span>10</span></li>
+                    <li><span>30</span></li>
+                    <li><span>40</span></li>
+                </ul>
+    
+                <ul class="lines">
+                    <li><div class="line" percentage="70"></div><span>1jour</span></li>
+                    <li><div class="line" percentage="30"></div><span>2jours</span></li>
+                    <li><div class="line" percentage="60"></div><span>3jours</span></li>
+                    <li><div class="line" percentage="20"></div><span>1semaine</span></li>
+                    <li><div class="line" percentage="80"></div><span>1mois</span></li>
+                </ul>
+    
+            </div>
+    
+            <section>
+
+                <div class="state">
+    
+                    <canvas id="myChart" width="400" height="300"></canvas>
+        
+                </div>
+                
+            </section>
+
+            <section>
+
+                <div class="text">
+    
+                    <h2>Static dashboard for the messages unread</h2>
+                    <p>Private messages exchanged with other users are a crucial part of your experience on our platform. We count all the new messages that you haven’t read yet. This statistic helps you stay up-to-date with your personal and professional communications.</p>
+            
+                </div>
+
+            </section>
+    
+        </div>
+        
+    
+        <div class="partie3">
+    
+            <section>
+
+                <div class="titre">
+    
+                    <h2>Your Companies in each neighborhood</h2>
+                    <p>We track the companies you follow on our platform. You can check the total number of companies you are following to see the extent of your interests and professional engagements. This statistic helps you stay connected with the fields and companies that matter most to you.</p>
+        
+                </div>
+
+            </section>
+    
+            <section>
+
+                <div class="entreprises">
+                    <canvas id="doughnut" width="300" height="300"></canvas>
+                </div>
+
+            </section>
+    
+        </div>
+    
+        <div class="partie4">
+    
+            <section>
+
+                <div class="titre">
+    
+                    <h2>People Interested in the Same Companies</h2>
+                    <p>This metric shows you how many other users are interested in the same companies as you. It’s a great way to discover people with shared interests and identify networking opportunities with like-minded professionals.</p>
+        
+                </div>
+
+            </section>
+    
+            <section>
+
+                <div class="personnes">
+    
+                    <canvas id="linechart" width="400" height="300"></canvas>
+        
+                </div>
+                
+            </section>
+    
+        </div>
+        
+        <footer>
+            <div class="fin">
+                <div class="logo">
+                    <a href="index.html">Unknown</a>
+                </div>
+            </div>
+        </footer>
+        
     </div>
 
     <script type="text/javascript">
@@ -143,5 +242,6 @@
     </script>
     <script src="index.js"></script>
     <script src="chart.js"></script>
+    <script src="header.js"></script>
 </body>
 </html>
